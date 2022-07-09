@@ -1,0 +1,12 @@
+cython
+faiss-cpu>=1.6.1
+filelock
+numpy
+regex
+torch
+transformers==4.15.0
+tqdm>=4.27
+wget
+spacy>=2.1.8
+wandb
+pyserini
