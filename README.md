@@ -19,6 +19,7 @@ Feel free to report an issue :)
   - [Hybrid Retrieval](#hybrid-retrieval)
 - [Pretraining](#pretraining)
 - [Fine-Tuning](#fine-tuning)
+- [Convert Model Checkpoints to Hugging Face and Upload to Hub](#convert-model-checkpoints-to-hugging-face-and-upload-to-hub)
 - [Citation](#citation)
 
 
@@ -280,6 +281,17 @@ Note that `--model_file` is used for checkpoint files saved in `train_dense_enco
 so use it only for your own pretrained models.  
 Also, you can replace `tau/spider` with `bert-base-uncased` in order to reproduce original DPR training.
 `
+
+## Convert Model Checkpoints to Hugging Face and Upload to Hub
+
+You can convert your trained model checkpoints to Hugging Face format and automatically upload them to the hub:
+```bash
+python convert_checkpoint_to_hf.py \
+--ckpt_path CKPT_PATH \
+--output_dir OUTPUT_DIR \
+--model_type ["shared", "question", "context"] \
+[--hf_model_name HF_USER/HF_MODEL_NAME]
+```
 
 ## Citation
 
