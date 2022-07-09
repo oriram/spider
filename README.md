@@ -39,7 +39,7 @@ To download the Wikipedia corpus used in our paper for both pretraining and eval
 ```bash
 python download_data.py --resource data.wikipedia_split.psgs_w100
 ```
-The corpus will be downloaded to `./data/wikipedia_split/psgs_w100.tsv`.
+The corpus will be downloaded to `./downloads/data/wikipedia_split/psgs_w100.tsv`.
 
 
 ## Corpus Preprocessing
@@ -52,7 +52,7 @@ To apply preprocessing, run:
 
 ```bash
 python preprocess_corpus.py \
---corpus_path ./data/wikipedia_split/psgs_w100.tsv \
+--corpus_path ./downloads/data/wikipedia_split/psgs_w100.tsv \
 --output_dir PREPROCESSED_DATA_DIR \
 --tokenizer_name bert-base-uncased \
 --num_processes 64  \
@@ -130,7 +130,7 @@ python dense_retriever.py \
 --pretrained_model_cfg tau/spider \
 [--model_file MODEL_CKPT_FILE] \
 --qa_file glob_pattern_1.csv,glob_pattern_2.csv,...,glob_pattern_n.csv \
---ctx_file ./data/wikipedia_split/psgs_w100.tsv \
+--ctx_file ./downloads/data/wikipedia_split/psgs_w100.tsv \
 --encoded_ctx_file "CORPUS_EMBEDDING_DIR/wikipedia_passages*.pkl" \
 --output_dir OUTPUT_DIR \
 --n-docs 100 \
@@ -161,7 +161,7 @@ On a Linux system, the correct path might look something like `/usr/lib/jvm/java
 python sparse_retriever.py \
 --index_name wikipedia-dpr \
 --qa_file glob_pattern_1.csv,glob_pattern_2.csv,...,glob_pattern_n.csv \
---ctx_file ./data/wikipedia_split/psgs_w100.tsv \
+--ctx_file ./downloads/data/wikipedia_split/psgs_w100.tsv \
 --output_dir OUTPUT_DIR \
 --n-docs 100 \
 --num_threads 16 \
@@ -191,7 +191,7 @@ Since the results file are quite bug, you can run `dense_retriever.py` and `spar
 python hybrid_retriever.py \
 --first_results FIRST_RETRIEVER_OUTPUT_DIR \
 --second_results SECOND_RETRIEVER_OUTPUT_DIR \
---ctx_file ./data/wikipedia_split/psgs_w100.tsv \
+--ctx_file ./downloads/data/wikipedia_split/psgs_w100.tsv \
 --output_dir OUTPUT_DIR \
 --n-docs 100 \
 --num_threads 16 \
