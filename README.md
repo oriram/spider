@@ -301,10 +301,15 @@ If you find our code or models helpful, please cite our paper:
     title = "Learning to Retrieve Passages without Supervision",
     author = "Ram, Ori  and
       Shachaf, Gal  and
-      Levy, Omer" and
+      Levy, Omer  and
       Berant, Jonathan  and
       Globerson, Amir",
-    booktitle = "NAACL 2022",
+    booktitle = "Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+    month = jul,
     year = "2022",
+    address = "Seattle, United States",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.naacl-main.193",
+    pages = "2687--2700",
 }
 ```
