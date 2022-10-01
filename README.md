@@ -227,13 +227,16 @@ python train_dense_encoder.py \
 --warmup_steps 2000 \
 --max_grad_norm 2.0 \
 --seed 12345 \
---eval_steps -1 \
+--no_eval \
+--eval_steps 2000 \
 --log_batch_step 10000000 \
 --train_rolling_loss_step 100 \
 --wandb_project $WANDB_PROJECT \
 --wandb_name $WANDB_RUN_NAME \
 --fp16
 ```
+
+Note that `eval_steps` is actually used here for determining how often you save checkpoints of your model.
 
 ## Fine-Tuning
 
