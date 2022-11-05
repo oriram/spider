@@ -185,7 +185,7 @@ curatedtrec-test  nq-test   squad1-test   trivia-test   webquestions-test
 ```
 
 In our paper we use `k=1000` (i.e. `--n-docs 1000`) for these two retrievers.  
-Since the results file are quite bug, you can run `dense_retriever.py` and `sparse_retriever.py` with `--output_no_text` which is more disk-efficient.
+Since the result files are quite big, you can run `dense_retriever.py` and `sparse_retriever.py` with `--output_no_text` which is more disk-efficient.
 
 ```bash
 python hybrid_retriever.py \
