@@ -137,6 +137,7 @@ python dense_retriever.py \
 --num_threads 16 \
 --batch_size 64 \
 --sequence_length 240 \
+--do_lower_case \
 [--no_wandb] \
 [--wandb_project WANDB_PROJECT] \
 [--wandb_name WANDB_NAME] \
